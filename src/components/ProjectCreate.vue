@@ -63,7 +63,7 @@ export default {
     methods: {
         handleSave() {
             this.isSaving = true
-            axios.post('/api/projects', this.project)
+            axios.post('http://127.0.0.1:8000/api/project', this.project)
                 .then(response => {
                     Swal.fire({
                         icon:'success',
@@ -77,6 +77,7 @@ export default {
                     return response
                 })
                 .catch(error => {
+                    console.log(error)
                     this.isSaving = false
                     Swal.fire ({
                         icon: 'error',

@@ -45,7 +45,7 @@
    
   <script>
   import axios from 'axios';
-  import LayoutDiv from '../LayoutDiv.vue';
+  import LayoutDiv from './LayoutDiv.vue';
   import Swal from 'sweetalert2'
    
   export default {
@@ -63,7 +63,7 @@
     },
     methods: {
       fetchProjectList() {
-        axios.get('/api/projects')
+        axios.get('http://127.0.0.1:8000/api/project')
           .then(response => {
               this.projects = response.data;
               return response
