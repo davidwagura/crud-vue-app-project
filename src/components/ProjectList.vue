@@ -83,7 +83,7 @@
               confirmButtonText: 'Yes, delete it!'
             }).then((result) => {
               if (result.isConfirmed) {
-                  axios.delete(`/api/projects/${id}`)
+                  axios.delete(`http://127.0.0.1:8000/api/project/${id}`)
                   .then( response => {
                       Swal.fire({
                           icon: 'success',

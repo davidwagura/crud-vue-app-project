@@ -86,7 +86,7 @@
      handleSave() {
          this.isSaving = true
          const id = this.$route.params.id;
-         axios.put(`/api/projects/${id}`, this.project)
+         axios.put(`http://127.0.0.1:8000/api/project/${id}`, this.project)
            .then(response => {
              Swal.fire({
                  icon: 'success',
